@@ -1,2 +1,2 @@
 -- colors/sequoia.lua
-require("sequoia")
+require("sequoia").setup()
