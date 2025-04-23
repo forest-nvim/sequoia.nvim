@@ -1,17 +1,20 @@
 -- lua/sequoia/palette.lua
 return {
-    bg      = "#1E1E1E",
-    fg      = "#D4D4D4",
-    black   = "#000000",
-    gray    = "#808080",
-    red     = "#F44747",
-    green   = "#6A9955",
-    yellow  = "#DCDCAA",
-    blue    = "#569CD6",
-    magenta = "#C586C0",
-    cyan    = "#4EC9B0",
-    white   = "#D4D4D4",
-    comment = "#608B4E",
-    cursor  = "#AEAFAD",
-    visual  = "#264F78",
+    bg             = "#0f0f11", -- Even darker base
+    fg             = "#e0e0e0", -- Slightly less bright foreground
+    black          = "#000000",
+    gray           = "#4d4d4d", -- Deeper gray
+    red            = "#e06c75", -- Fleet's red
+    green          = "#98c379", -- Fleet's green
+    yellow         = "#e6c07b", -- Fleet's yellow
+    blue           = "#61afef", -- Fleet's blue
+    magenta        = "#c678dd", -- Fleet's magenta
+    cyan           = "#56b6c2", -- Fleet's cyan
+    white          = "#d4d4d4",
+    comment        = "#5c6370", -- Muted comment color
+    cursor_normal  = "#abb2bf", -- Subtle cursor in normal mode
+    cursor_insert  = "#c678dd", -- Distinct cursor in insert mode
+    cursor_visual  = "#61afef", -- Different cursor in visual mode
+    cursor_replace = "#e06c75", -- Another distinct cursor
+    visual         = "#383a59", -- Darker visual selection
 }
