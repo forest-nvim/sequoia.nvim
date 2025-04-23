@@ -1,181 +1,41 @@
 -- lua/sequoia/init.lua
 local colors = require("sequoia.palette")
+local highlights = require("sequoia.highlights")
 
 local M = {}
 
 function M.setup()
-    local highlights = {
-        Normal       = { fg = colors.fg, bg = colors.bg },
-        NormalFloat  = { fg = colors.fg, bg = colors.dark_gray },
-        NormalNC     = { fg = colors.fg, bg = colors.bg },
-        Comment      = { fg = colors.light_gray, italic = true },
-        Constant     = { fg = colors.orange },
-        String       = { fg = colors.string },
-        Character    = { fg = colors.string },
-        Number       = { fg = colors.orange },
-        Boolean      = { fg = colors.orange },
-        Float        = { fg = colors.orange },
-        Function     = { fg = colors.light_gray },
-        Identifier   = { fg = colors.fg },
-        Keyword      = { fg = colors.green },
-        Statement    = { fg = colors.green },
-        Conditional  = { fg = colors.green },
-        Repeat       = { fg = colors.green },
-        Label        = { fg = colors.green },
-        Operator     = { fg = colors.white },
-        Exception    = { fg = colors.green },
-        PreProc      = { fg = colors.green },
-        Include      = { fg = colors.green },
-        Define       = { fg = colors.green },
-        Macro        = { fg = colors.green },
-        PreCondit    = { fg = colors.green },
-        Type         = { fg = colors.light_gray },
-        StorageClass = { fg = colors.green },
-        Structure    = { fg = colors.green },
-        Typedef      = { fg = colors.green },
-        Special      = { fg = colors.orange },
-        SpecialChar  = { fg = colors.orange },
-        Tag          = { fg = colors.orange },
-        Delimiter    = { fg = colors.white },
-        SpecialComment = { fg = colors.light_gray, italic = true },
-        Debug        = { fg = colors.orange },
-        Underlined   = { underline = true },
-        Ignore       = { fg = colors.gray },
-        Error        = { fg = colors.orange },
-        Todo         = { fg = colors.orange, bold = true },
-        Visual       = { bg = colors.dark_gray },
-        VisualNOS    = { bg = colors.dark_gray },
-        Cursor       = { fg = colors.bg, bg = colors.cursor },
-        CursorLine   = { bg = colors.dark_gray },
-        CursorLineNr = { fg = colors.white },
-        LineNr       = { fg = colors.gray },
-        CursorColumn = { bg = colors.dark_gray },
-        ColorColumn  = { bg = colors.dark_gray },
-        SignColumn   = { fg = colors.fg, bg = colors.bg },
-        Folded       = { fg = colors.light_gray, bg = colors.dark_gray },
-        FoldColumn   = { fg = colors.gray, bg = colors.bg },
-        Pmenu        = { fg = colors.fg, bg = colors.black },
-        PmenuSel     = { fg = colors.bg, bg = colors.gray },
-        PmenuSbar    = { bg = colors.dark_gray },
-        PmenuThumb   = { bg = colors.gray },
-        StatusLine   = { fg = colors.fg, bg = colors.black },
-        StatusLineNC = { fg = colors.gray, bg = colors.black },
-        TabLine      = { fg = colors.gray, bg = colors.black },
-        TabLineFill  = { fg = colors.gray, bg = colors.black },
-        TabLineSel   = { fg = colors.fg, bg = colors.dark_gray },
-        VertSplit    = { fg = colors.dark_gray },
-        WinSeparator = { fg = colors.dark_gray },
-        WildMenu     = { fg = colors.bg, bg = colors.gray },
-        Search       = { fg = colors.bg, bg = colors.orange },
-        IncSearch    = { fg = colors.bg, bg = colors.orange },
-        Substitute   = { fg = colors.bg, bg = colors.orange },
-        MatchParen   = { fg = colors.orange, bold = true },
-        DiffAdd      = { fg = colors.green, bg = colors.dark_gray },
-        DiffChange   = { fg = colors.orange, bg = colors.dark_gray },
-        DiffDelete   = { fg = colors.orange, bg = colors.dark_gray },
-        DiffText     = { fg = colors.orange, bg = colors.dark_gray, bold = true },
-        Directory    = { fg = colors.green },
-        ErrorMsg     = { fg = colors.orange },
-        WarningMsg   = { fg = colors.string },
-        ModeMsg      = { fg = colors.fg },
-        MoreMsg      = { fg = colors.green },
-        Question     = { fg = colors.green },
-        NonText      = { fg = colors.gray },
-        Conceal      = { fg = colors.gray },
-        SpellBad     = { undercurl = true, sp = colors.orange },
-        SpellCap     = { undercurl = true, sp = colors.string },
-        SpellLocal   = { undercurl = true, sp = colors.green },
-        SpellRare    = { undercurl = true, sp = colors.green },
-        QuickFixLine = { bg = colors.dark_gray },
-        qfLineNr     = { fg = colors.gray },
-        qfFileName   = { fg = colors.green },
-        qfSeparator  = { fg = colors.gray },
-        qfError      = { fg = colors.orange },
-        qfWarning    = { fg = colors.string },
-        qfInfo       = { fg = colors.green },
-        qfNote       = { fg = colors.green },
-        qfAdded      = { fg = colors.green },
-        qfRemoved    = { fg = colors.orange },
-        qfChanged    = { fg = colors.orange },
-        qfFile       = { fg = colors.green },
-        qfModule     = { fg = colors.green },
-        qfLibrary    = { fg = colors.green },
-        qfType       = { fg = colors.light_gray },
-        qfScope      = { fg = colors.green },
-        qfInterface  = { fg = colors.green },
-        qfNamespace  = { fg = colors.green },
-        qfPackage    = { fg = colors.green },
-        qfClass      = { fg = colors.green },
-        qfStruct     = { fg = colors.green },
-        qfUnion      = { fg = colors.green },
-        qfEnum       = { fg = colors.green },
-        qfFunction   = { fg = colors.light_gray },
-        qfVariable   = { fg = colors.fg },
-        qfConstant   = { fg = colors.orange },
-        qfString     = { fg = colors.string },
-        qfCharacter  = { fg = colors.string },
-        qfNumber     = { fg = colors.orange },
-        qfBoolean    = { fg = colors.orange },
-        qfFloat      = { fg = colors.orange },
-        qfOperator   = { fg = colors.white },
-        qfRepeat     = { fg = colors.green },
-        qfConditional = { fg = colors.green },
-        qfStatement  = { fg = colors.green },
-        qfLabel      = { fg = colors.green },
-        qfKeyword    = { fg = colors.green },
-        qfException  = { fg = colors.green },
-        qfPreProc    = { fg = colors.green },
-        qfInclude    = { fg = colors.green },
-        qfDefine     = { fg = colors.green },
-        qfMacro      = { fg = colors.green },
-        qfPreCondit  = { fg = colors.green },
-        qfType       = { fg = colors.light_gray },
-        qfStorageClass = { fg = colors.green },
-        qfStructure  = { fg = colors.green },
-        qfTypedef    = { fg = colors.green },
-        qfTag        = { fg = colors.orange },
-        qfSpecial    = { fg = colors.orange },
-        qfSpecialChar = { fg = colors.orange },
-        qfDelimiter  = { fg = colors.white },
-        qfSpecialComment = { fg = colors.light_gray, italic = true },
-        qfDebug      = { fg = colors.orange },
-        qfUnderlined = { underline = true },
-        qfError      = { fg = colors.orange },
-        qfTodo       = { fg = colors.orange, bold = true },
-        qfIgnore     = { fg = colors.gray },
-        qfFolded     = { fg = colors.light_gray, bg = colors.dark_gray },
-        qfFoldColumn = { fg = colors.gray, bg = colors.bg },
-        qfSignColumn = { fg = colors.fg, bg = colors.bg },
-        qfLineNr     = { fg = colors.gray },
-        qfCursorLine = { bg = colors.dark_gray },
-        qfCursorLineNr = { fg = colors.white },
-        qfCursorColumn = { bg = colors.dark_gray },
-        qfColorColumn = { bg = colors.dark_gray },
-        qfStatusLine = { fg = colors.fg, bg = colors.black },
-        qfStatusLineNC = { fg = colors.gray, bg = colors.black },
-        qfTabLine    = { fg = colors.gray, bg = colors.black },
-        qfTabLineFill = { fg = colors.gray, bg = colors.black },
-        qfTabLineSel = { fg = colors.fg, bg = colors.dark_gray },
-        qfVertSplit  = { fg = colors.dark_gray },
-        qfWinSeparator = { fg = colors.dark_gray },
-        qfWildMenu   = { fg = colors.bg, bg = colors.gray },
-        qfPmenu      = { fg = colors.fg, bg = colors.black },
-        qfPmenuSel   = { fg = colors.bg, bg = colors.gray },
-        qfPmenuSbar  = { bg = colors.dark_gray },
-        qfPmenuThumb = { bg = colors.gray },
-        qfSearch     = { fg = colors.bg, bg = colors.orange },
-        qfIncSearch  = { fg = colors.bg, bg = colors.orange },
-        qfSubstitute = { fg = colors.bg, bg = colors.orange },
-        qfMatchParen = { fg = colors.orange, bold = true },
-        qfDiffAdd    = { fg = colors.green, bg = colors.dark_gray },
-        qfDiffChange = { fg = colors.orange, bg = colors.dark_gray },
-        qfDiffDelete = { fg = colors.orange, bg = colors.dark_gray },
-        qfDiffText   = { fg = colors.orange, bg = colors.dark_gray, bold = true },
-    }
+    local all_highlights = {}
 
-    for group, opts in pairs(highlights) do
+    -- Merge all highlight groups
+    for _, section in pairs(highlights) do
+        for group, opts in pairs(section) do
+            all_highlights[group] = opts
+        end
+    end
+
+    -- Apply all highlights
+    for group, opts in pairs(all_highlights) do
         vim.api.nvim_set_hl(0, group, opts)
     end
+
+    -- Set terminal colors
+    vim.g.terminal_color_0 = colors.black
+    vim.g.terminal_color_1 = colors.red
+    vim.g.terminal_color_2 = colors.green
+    vim.g.terminal_color_3 = colors.yellow
+    vim.g.terminal_color_4 = colors.blue
+    vim.g.terminal_color_5 = colors.magenta
+    vim.g.terminal_color_6 = colors.cyan
+    vim.g.terminal_color_7 = colors.white
+    vim.g.terminal_color_8 = colors.gray
+    vim.g.terminal_color_9 = colors.orange
+    vim.g.terminal_color_10 = colors.green
+    vim.g.terminal_color_11 = colors.yellow
+    vim.g.terminal_color_12 = colors.blue
+    vim.g.terminal_color_13 = colors.magenta
+    vim.g.terminal_color_14 = colors.cyan
+    vim.g.terminal_color_15 = colors.white
 end
 
 return M
