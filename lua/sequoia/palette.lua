@@ -1,21 +1,78 @@
--- lua/sequoia/palette.lua
-return {
-    bg      = "#0a0a0a",
-    fg      = "#e0e0e0",
-    black   = "#000000",
-    gray    = "#404040",
-    red     = "#d46a6a",
-    green   = "#4d7c4d",
-    yellow  = "#e6b566",
-    blue    = "#8c8c8c",
-    magenta = "#a6a6a6",
-    cyan    = "#737373",
-    white   = "#ffffff",
-    comment = "#333333",
-    cursor  = "#d9d9d9",
-    visual  = "#4d4d4d",
-    string  = "#e6b566",
-    orange  = "#d46a6a",
-    dark_gray = "#1a1a1a",
-    light_gray = "#666666",
+local options = require("sequoia.config").options
+local variants = {
+	main = {
+		_nc = "#1f1d30",
+		base = "#0a0a0a", --Neutral 950
+		surface = "#171717", --Neutral 900
+		overlay = "#27272a", --Neutral 800
+		muted = "#525252", --Neutral 600
+		subtle = "#57534e", --Stone 600
+		text = "#e7e5e4", --Stone 200
+		love = "#fb923c", --Orange 400, bark
+		gold = "#1a2e05", --lime 950, leaves
+		rose = "#fbbf24", --Amber 400, 
+		pine = "#3e8fb0",
+		foam = "#0ea5e9", --sky 500, sky
+		iris = "#451a03", --amber 950, soil
+		leaf = "#95b1ac",
+		highlight_low = "#0c0a09", --stone 950 
+		highlight_med = "#1c1917", --stone 900
+		highlight_high = "#292524", --stone 800
+		none = "NONE",
+	},
+	night = {
+		_nc = "#0a0a0a",
+		base = "#0a0a0a", --Neutral 950
+		surface = "#171717", --Neutral 900
+		overlay = "#27272a", --Neutral 800
+		muted = "#525252", --Neutral 600
+		subtle = "#57534e", --Stone 600
+		text = "#e7e5e4", --Stone 200
+		love = "#fb923c", --Orange 400, bark
+		gold = "#1a2e05", --lime 950, leaves
+		rose = "#fbbf24", --Amber 400, 
+		pine = "#3e8fb0",
+		foam = "#0ea5e9", --sky 500, sky
+		iris = "#451a03", --amber 950, soil
+		leaf = "#95b1ac",
+		highlight_low = "#0c0a09", --stone 950 
+		highlight_med = "#1c1917", --stone 900
+		highlight_high = "#292524", --stone 800
+		none = "NONE",
+	},
+	rise = {
+		_nc = "#1f1d30",
+		base = "#0a0a0a", --Neutral 950
+		surface = "#171717", --Neutral 900
+		overlay = "#27272a", --Neutral 800
+		muted = "#525252", --Neutral 600
+		subtle = "#57534e", --Stone 600
+		text = "#e7e5e4", --Stone 200
+		love = "#fb923c", --Orange 400, bark
+		gold = "#1a2e05", --lime 950, leaves
+		rose = "#fbbf24", --Amber 400, 
+		pine = "#3e8fb0",
+		foam = "#0ea5e9", --sky 500, sky
+		iris = "#451a03", --amber 950, soil
+		leaf = "#95b1ac",
+		highlight_low = "#0c0a09", --stone 950 
+		highlight_med = "#1c1917", --stone 900
+		highlight_high = "#292524", --stone 800
+		none = "NONE",
+	},
 }
+
+if options.palette ~= nil and next(options.palette) then
+	-- handle variant specific overrides
+	for variant_name, override_palette in pairs(options.palette) do
+		if variants[variant_name] then
+			variants[variant_name] = vim.tbl_extend("force", variants[variant_name], override_palette or {})
+		end
+	end
+end
+
+if variants[options.variant] ~= nil then
+	return variants[options.variant]
+end
+
+return vim.o.background == "light" and variants.rise or variants[options.dark_variant or "main"]
