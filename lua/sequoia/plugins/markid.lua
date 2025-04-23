@@ -7,4 +7,4 @@
 
 local p = require("sequoia.palette")
 
-return { p.foam, p.rose, p.iris }
+return { p.cloud, p.canopy, p.warm }

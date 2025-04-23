@@ -1,6 +1,6 @@
 ---@alias Variant "main" | "night" | "rise"
----@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, love: string, gold: string, rose: string, pine: string, foam: string, iris: string }
----@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "love" | "gold" | "rose" | "pine" | "foam" | "iris" | "highlight_low" | "highlight_med" | "highlight_high"
+---@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, bark: string, autumn: string, canopy: string, pine: string, cloud: string, warm: string }
+---@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "bark" | "autumn" | "canopy" | "pine" | "cloud" | "warm" | "highlight_low" | "highlight_med" | "highlight_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
 local config = {}
@@ -41,33 +41,33 @@ config.options = {
 	---@type table<string, string | PaletteColor>
 	groups = {
 		border = "muted",
-		link = "iris",
+		link = "warm",
 		panel = "surface",
 
-		error = "love",
-		hint = "iris",
-		info = "foam",
+		error = "bark",
+		hint = "warm",
+		info = "cloud",
 		ok = "leaf",
-		warn = "gold",
+		warn = "autumn",
 		note = "pine",
-		todo = "rose",
+		todo = "canopy",
 
-		git_add = "foam",
-		git_change = "rose",
-		git_delete = "love",
-		git_dirty = "rose",
+		git_add = "cloud",
+		git_change = "canopy",
+		git_delete = "bark",
+		git_dirty = "canopy",
 		git_ignore = "muted",
-		git_merge = "iris",
+		git_merge = "warm",
 		git_rename = "pine",
-		git_stage = "iris",
-		git_text = "rose",
+		git_stage = "warm",
+		git_text = "canopy",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "iris",
-		h2 = "foam",
-		h3 = "rose",
-		h4 = "gold",
+		h1 = "warm",
+		h2 = "cloud",
+		h3 = "canopy",
+		h4 = "autumn",
 		h5 = "pine",
 		h6 = "leaf",
 

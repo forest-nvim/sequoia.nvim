@@ -8,18 +8,18 @@ end
 
 return {
 	normal = {
-		a = { bg = p.rose, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.rose },
+		a = { bg = p.canopy, fg = p.base, gui = "bold" },
+		b = { bg = p.overlay, fg = p.canopy },
 		c = { bg = bg_base, fg = p.text },
 	},
 	insert = {
-		a = { bg = p.foam, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.foam },
+		a = { bg = p.cloud, fg = p.base, gui = "bold" },
+		b = { bg = p.overlay, fg = p.cloud },
 		c = { bg = bg_base, fg = p.text },
 	},
 	visual = {
-		a = { bg = p.iris, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.iris },
+		a = { bg = p.warm, fg = p.base, gui = "bold" },
+		b = { bg = p.overlay, fg = p.warm },
 		c = { bg = bg_base, fg = p.text },
 	},
 	replace = {
@@ -28,8 +28,8 @@ return {
 		c = { bg = bg_base, fg = p.text },
 	},
 	command = {
-		a = { bg = p.love, fg = p.base, gui = "bold" },
-		b = { bg = p.overlay, fg = p.love },
+		a = { bg = p.bark, fg = p.base, gui = "bold" },
+		b = { bg = p.overlay, fg = p.bark },
 		c = { bg = bg_base, fg = p.text },
 	},
 	inactive = {

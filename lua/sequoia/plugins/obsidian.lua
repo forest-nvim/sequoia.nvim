@@ -9,6 +9,6 @@ local p = require("sequoia.palette")
 
 return {
 	ObsidianBullet = { fg = p.muted },
-	ObsidianRefText = { underline = true, fg = p.iris },
-	ObsidianDone = { bold = true, fg = p.foam }
+	ObsidianRefText = { underline = true, fg = p.warm },
+	ObsidianDone = { bold = true, fg = p.cloud }
 }

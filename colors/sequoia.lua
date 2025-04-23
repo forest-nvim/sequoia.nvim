@@ -1,2 +1,2 @@
-package.loaded["rose-pine.palette"] = nil
-require("rose-pine").colorscheme()
+package.loaded["sequoia.palette"] = nil
+require("sequoia").colorscheme()
