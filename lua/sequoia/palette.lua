@@ -1,42 +1,47 @@
 local options = require("sequoia.config").options
 local variants = {
-	main = {	--Modeling Jetbrains Fleet
-    _nc = "#1B1D23",
-	base = "#1B1D23",
-	surface = "#22252B",
-	overlay = "#2B2F36",
-	muted = "#3A3F4B",
-	subtle = "#4C5263",
-	text = "#E5E5E5",
-	bark = "#FF5C57",
-	autumn = "#F3B562",
-	canopy = "#C586C0",
-	pine = "#9CCF8D",
-	cloud = "#70CAD1",
-	warm = "#D99C66",
-	leaf = "#61AFEF",
-	highlight_low = "#1B1D23",
-	highlight_med = "#22252B",
-	highlight_high = "#2B2F36",
-	none = "NONE",
+	main = { 
+		_nc = "#0E0E12",         -- nearly black with a hint of blue
+		base = "#101117",        -- soft black base
+		surface = "#151620",     -- a touch lighter for card surfaces
+		overlay = "#1C1E2A",     -- overlay layers
+		muted = "#2F3240",       -- desaturated gray-blue
+		subtle = "#45485C",      -- soft steel for less prominent text
+		text = "#ECEBFF",        -- crisp, neon-white text
+		bark = "#FF355E",        -- neon pink-red
+		autumn = "#FF8F40",      -- glowing tangerine
+		canopy = "#D66AFF",      -- electric violet
+		pine = "#73FFA1",        -- minty neon green
+		cloud = "#38E8F2",       -- cyan signage
+		warm = "#FFB347",        -- warm, soft amber
+		leaf = "#7BDFFF",        -- light neon blue
+		highlight_low = "#181A24",  
+		highlight_med = "#222430",
+		highlight_high = "#2C2F3C",
+		none = "NONE",
 	},
-	night = { --Modeling Sequoia from VSC
-	_nc = "#080808",
-	base = "#080808",
-	surface = "#0f0f0f",
-	overlay = "#141414",
-	muted = "#2a2a2a",
-	subtle = "#3a3a3a",
-	text = "#f2f2f2",
-	bark = "#5ad6ff",
-	warm = "#5ad6ff",
-	cloud = "#444444",
-	leaf = "#3a3a3a",
-	highlight_low = "#080808",
-	highlight_med = "#0f0f0f",
-	highlight_high = "#141414",
-	none = "NONE",
+	
+	night = { 
+		_nc = "#0C0D10",         -- ultra-dark base
+		base = "#0F1014",
+		surface = "#15161A",
+		overlay = "#1A1C22",
+		muted = "#2B2D33",       -- minimal contrast
+		subtle = "#40424A",      -- dimmed text
+		text = "#E1E1E6",        -- soft white
+		bark = "#A68DA4",        -- pastel purple (faded magenta)
+		autumn = "#E4AA80",      -- warm muted peach
+		canopy = "#B7A2CC",      -- dusty lavender
+		pine = "#A4CBB8",        -- muted mint
+		cloud = "#9ABBC7",       -- soft blue-grey
+		warm = "#E8BFAE",        -- gentle pastel orange
+		leaf = "#A7CCE8",        -- pastel azure
+		highlight_low = "#121317",
+		highlight_med = "#181A1F",
+		highlight_high = "#1F2127",
+		none = "NONE",
 	},
+	
 	rise = { --warm, sunrise
 		_nc = "#1a1517",
 		base = "#1a1517",
@@ -73,3 +78,4 @@ if variants[options.variant] ~= nil then
 end
 
 return vim.o.background == "light" and variants.rise or variants[options.dark_variant or "main"]
+
