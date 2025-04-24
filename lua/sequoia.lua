@@ -13,7 +13,7 @@ local function set_highlights()
 		panel_highlight = palette.highlight_low,
 		panel_highlight_med = palette.highlight_med,
 		panel_highlight_high = palette.highlight_high,
-		panel_border = palette.muted,
+		panel_border = palette.subtle,
 		panel_border_highlight = palette.highlight_low,
 		panel_border_highlight_med = palette.highlight_med,
 		panel_border_highlight_high = palette.highlight_high,
