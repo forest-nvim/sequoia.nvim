@@ -35,7 +35,7 @@ local function set_highlights()
 		["@number"] = { link = "Number" },
 		["@parameter"] = { fg = palette.warm, italic = styles.italic },
 		["@preproc"] = { link = "PreProc" },
-		["@punctuation"] = { fg = palette.text},
+		["@punctuation"] = { fg = palette.text },
 		["@punctuation.bracket"] = { link = "@punctuation" },
 		["@punctuation.delimiter"] = { link = "@punctuation" },
 		["@punctuation.special"] = { link = "@punctuation" },
@@ -404,7 +404,7 @@ local function set_highlights()
 
 		["@tag"] = { link = "Tag" },
 		["@tag.attribute"] = { fg = palette.bark },
-		["@tag.delimiter"] = { fg = palette.subtle },
+		["@tag.delimiter"] = { fg = palette.text },
 
 		--- Non-highlighting captures
 		-- ["@none"] = {},
