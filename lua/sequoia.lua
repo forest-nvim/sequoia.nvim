@@ -8,7 +8,7 @@ local function set_highlights()
 
 	local groups = {
 		-- Default groups
-		border = palette.muted,
+		border = palette.subtle,
 		panel = palette.surface,
 		panel_highlight = palette.highlight_low,
 		panel_highlight_med = palette.highlight_med,
@@ -19,7 +19,7 @@ local function set_highlights()
 		panel_border_highlight_high = palette.highlight_high,
 
 		error = palette.error,
-		warn = palette.autumn,
+		warn = palette.warm,
 		info = palette.canopy,
 		ok = palette.pine,
 		hint = palette.cloud,
@@ -30,7 +30,7 @@ local function set_highlights()
 		git_delete = palette.bark,
 		git_text = palette.pine,
 
-		todo = palette.autumn,
+		todo = palette.warm,
 
 		h1 = palette.autumn,
 		h2 = palette.canopy,
@@ -177,7 +177,7 @@ local function set_highlights()
 		TabLineFill = { bg = groups.panel },
 		TabLineSel = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
 		Title = { fg = palette.cloud, bold = styles.bold },
-		VertSplit = { fg = groups.border },
+		VertSplit = { fg = palette.subtle },
 		Visual = { bg = palette.warm, blend = 15 },
 		-- VisualNOS = {},
 		WarningMsg = { fg = groups.warn, bold = styles.bold },
@@ -226,7 +226,7 @@ local function set_highlights()
 		Debug = { fg = palette.canopy },
 		Define = { fg = palette.warm },
 		Delimiter = { fg = palette.text },
-		Error = { fg = palette.bark },
+		Error = { fg = palette.error},
 		Exception = { fg = palette.pine },
 		Float = { fg = palette.autumn },
 		Function = { fg = palette.canopy },
@@ -241,7 +241,7 @@ local function set_highlights()
 		LspReferenceText = { bg = palette.highlight_med },
 		LspReferenceWrite = { bg = palette.highlight_med },
 		Macro = { fg = palette.warm },
-		Number = { fg = palette.autumn },
+		Number = { fg = palette.warm },
 		Operator = { fg = palette.text },
 		PreCondit = { fg = palette.warm },
 		PreProc = { link = "PreCondit" },
@@ -787,7 +787,7 @@ local function set_highlights()
 		NavicIconsModule = { fg = palette.canopy },
 		NavicIconsNamespace = { fg = palette.muted },
 		NavicIconsNull = { fg = palette.bark },
-		NavicIconsNumber = { fg = palette.autumn },
+		NavicIconsNumber = { fg = palette.warm },
 		NavicIconsObject = { fg = palette.autumn },
 		NavicIconsOperator = { fg = palette.cloud },
 		NavicIconsPackage = { fg = palette.muted },
