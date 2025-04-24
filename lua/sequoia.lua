@@ -97,7 +97,7 @@ local function set_highlights()
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
-		Directory = { fg = palette.cloud, bold = styles.bold },
+		Directory = { fg = palette.bark, bold = styles.bold },
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = groups.error, bold = styles.bold },
 		FloatBorder = make_border(),
@@ -402,9 +402,9 @@ local function set_highlights()
 		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
-		["@tag"] = { link = "Tag" },
+		["@tag"] = { fg = palette.canopy },
 		["@tag.attribute"] = { fg = palette.bark },
-		["@tag.delimiter"] = { fg = palette.subtle },
+		["@tag.delimiter"] = { fg = palette.canopy },
 
 		--- Non-highlighting captures
 		-- ["@none"] = {},
