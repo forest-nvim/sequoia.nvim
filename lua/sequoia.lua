@@ -6,7 +6,40 @@ local function set_highlights()
 	local palette = require("sequoia.palette")
 	local styles = config.options.styles
 
-	local groups = {}
+	local groups = {
+		-- Default groups
+		border = palette.muted,
+		panel = palette.surface,
+		panel_highlight = palette.highlight_low,
+		panel_highlight_med = palette.highlight_med,
+		panel_highlight_high = palette.highlight_high,
+		panel_border = palette.muted,
+		panel_border_highlight = palette.highlight_low,
+		panel_border_highlight_med = palette.highlight_med,
+		panel_border_highlight_high = palette.highlight_high,
+
+		error = palette.bark,
+		warn = palette.autumn,
+		info = palette.canopy,
+		ok = palette.pine,
+		hint = palette.cloud,
+		link = palette.warm,
+
+		git_add = palette.autumn,
+		git_change = palette.canopy,
+		git_delete = palette.bark,
+		git_text = palette.pine,
+
+		todo = palette.autumn,
+
+		h1 = palette.autumn,
+		h2 = palette.canopy,
+		h3 = palette.pine,
+		h4 = palette.cloud,
+		h5 = palette.warm,
+		h6 = palette.text,
+	}
+
 	for group, color in pairs(config.options.groups) do
 		groups[group] = utilities.parse_color(color)
 	end
