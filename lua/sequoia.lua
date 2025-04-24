@@ -192,7 +192,7 @@ local function set_highlights()
 		Constant = { fg = palette.autumn },
 		Debug = { fg = palette.canopy },
 		Define = { fg = palette.warm },
-		Delimiter = { fg = palette.subtle },
+		Delimiter = { fg = palette.text },
 		Error = { fg = palette.bark },
 		Exception = { fg = palette.pine },
 		Float = { fg = palette.autumn },
@@ -343,9 +343,9 @@ local function set_highlights()
 		["@keyword.directive.define"] = { fg = palette.warm },
 
 		--- Punctuation
-		["@punctuation.delimiter"] = { fg = palette.subtle },
-		["@punctuation.bracket"] = { fg = palette.subtle },
-		["@punctuation.special"] = { fg = palette.subtle },
+		["@punctuation.delimiter"] = { fg = palette.text },
+		["@punctuation.bracket"] = { fg = palette.text },
+		["@punctuation.special"] = { fg = palette.text },
 
 		--- Comments
 		["@comment"] = { link = "Comment" },
@@ -402,9 +402,9 @@ local function set_highlights()
 		["@diff.minus"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
-		["@tag"] = { fg = palette.canopy },
+		["@tag"] = { link = "Tag" },
 		["@tag.attribute"] = { fg = palette.bark },
-		["@tag.delimiter"] = { fg = palette.canopy },
+		["@tag.delimiter"] = { fg = palette.subtle },
 
 		--- Non-highlighting captures
 		-- ["@none"] = {},
