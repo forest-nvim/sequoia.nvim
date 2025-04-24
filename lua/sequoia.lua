@@ -220,7 +220,7 @@ local function set_highlights()
 		StorageClass = { fg = palette.cloud },
 		String = { fg = palette.autumn },
 		Structure = { fg = palette.cloud },
-		Tag = { fg = palette.warm},
+		Tag = { fg = palette.warm },
 		Todo = { fg = palette.canopy, bg = palette.canopy, blend = 20 },
 		Type = { fg = palette.cloud },
 		TypeDef = { link = "Type" },
@@ -914,7 +914,7 @@ local function set_highlights()
 		AlphaShortcut = { fg = palette.canopy },
 
 		-- github/copilot.vim
-		CopilotSuggestion = { fg = palette.muted, italic = styles.italic },
+		CopilotSuggestion = { fg = palette.subtle, italic = styles.italic },
 
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = { bg = palette.overlay },
@@ -1199,4 +1199,3 @@ function M.setup(options)
 end
 
 return M
-

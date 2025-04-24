@@ -22,19 +22,19 @@ local variants = {
 	},
 
 	night = {
-		_nc = "#0C0D10", -- ultra-dark base
+		_nc = "#010101", -- ultra-dark base
 		base = "#0F1014",
 		surface = "#15161A",
 		overlay = "#1A1C22",
 		muted = "#2B2D33", -- minimal contrast
 		subtle = "#40424A", -- dimmed text
 		text = "#E1E1E6", -- soft white
-		bark = "#A68DA4", -- pastel purple (faded magenta)
+		bark = "#ddd6fe", -- pastel purple (faded magenta)
 		autumn = "#E4AA80", -- warm muted peach
 		canopy = "#B7A2CC", -- dusty lavender
-		pine = "#A4CBB8", -- muted mint
+		pine = "#89ac8a", -- muted mint
 		cloud = "#9ABBC7", -- soft blue-grey
-		warm = "#E8BFAE", -- gentle pastel orange
+		warm = "#E1E1E6", -- gentle pastel orange
 		leaf = "#A7CCE8", -- pastel azure
 		highlight_low = "#121317",
 		highlight_med = "#181A1F",
