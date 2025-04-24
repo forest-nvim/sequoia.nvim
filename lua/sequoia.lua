@@ -275,7 +275,7 @@ local function set_highlights()
 
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.text, italic = styles.italic },
+		["@variable"] = { fg = palette.bark, italic = styles.italic },
 		["@variable.builtin"] = { fg = palette.bark, italic = styles.italic, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.warm, italic = styles.italic },
 		["@variable.parameter.builtin"] = { fg = palette.warm, italic = styles.italic, bold = styles.bold },
@@ -428,7 +428,7 @@ local function set_highlights()
 		["@lsp.type.variable"] = {}, -- defer to treesitter for regular variables
 		["@lsp.type.variable.svelte"] = { link = "@variable" },
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
-		["@lsp.typemod.operator.injected"] = { link = "@operator" },
+		["@lsp.typemod.operator.injected"] = { link = "Operator" },
 		["@lsp.typemod.string.injected"] = { link = "@string" },
 		["@lsp.typemod.variable.constant"] = { link = "@constant" },
 		["@lsp.typemod.variable.defaultLibrary"] = { link = "@variable.builtin" },
