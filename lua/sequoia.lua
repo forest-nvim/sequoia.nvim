@@ -71,8 +71,8 @@ local function set_highlights()
 		["@text.uri"] = { fg = groups.link },
 		["@text.warning"] = { fg = groups.warn },
 		["@todo"] = { link = "Todo" },
-		["@operator"] = { fg = palette.bark },
-		["Operator"] = { fg = palette.bark },
+		["@operator"] = { fg = palette.text },
+		Operator = { fg = palette.text },
 
 		-- lukas-reineke/indent-blankline.nvim
 		IndentBlanklineChar = { fg = palette.muted, nocombine = true },
@@ -209,7 +209,7 @@ local function set_highlights()
 		LspReferenceWrite = { bg = palette.highlight_med },
 		Macro = { fg = palette.warm },
 		Number = { fg = palette.autumn },
-		Operator = { fg = palette.cloud },
+		Operator = { fg = palette.text },
 		PreCondit = { fg = palette.warm },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.pine },
@@ -275,8 +275,8 @@ local function set_highlights()
 
 		--- Treesitter
 		--- |:help treesitter-highlight-groups|
-		["@variable"] = { fg = palette.bark, italic = styles.italic },
-		["@variable.builtin"] = { fg = palette.bark, italic = styles.italic, bold = styles.bold },
+		["@variable"] = { fg = palette.text },
+		["@variable.builtin"] = { fg = palette.text, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.warm, italic = styles.italic },
 		["@variable.parameter.builtin"] = { fg = palette.warm, italic = styles.italic, bold = styles.bold },
 		["@variable.member"] = { fg = palette.cloud },
@@ -323,12 +323,12 @@ local function set_highlights()
 		["@function.method.call"] = { fg = palette.warm },
 
 		["@constructor"] = { fg = palette.cloud },
-		["@operator"] = { fg = palette.cloud },
+		["@operator"] = { fg = palette.text },
 
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
 		-- ["@keyword.function"] = {},
-		["@keyword.operator"] = { fg = palette.subtle },
+		["@keyword.operator"] = { fg = palette.text },
 		["@keyword.import"] = { fg = palette.pine },
 		["@keyword.storage"] = { fg = palette.cloud },
 		["@keyword.repeat"] = { fg = palette.pine },
