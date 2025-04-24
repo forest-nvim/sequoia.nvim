@@ -207,7 +207,7 @@ local function set_highlights()
 		LspReferenceWrite = { bg = palette.highlight_med },
 		Macro = { fg = palette.warm },
 		Number = { fg = palette.autumn },
-		Operator = { fg = palette.subtle },
+		Operator = { fg = palette.cloud },
 		PreCondit = { fg = palette.warm },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.pine },
@@ -321,7 +321,7 @@ local function set_highlights()
 		["@function.method.call"] = { fg = palette.warm },
 
 		["@constructor"] = { fg = palette.cloud },
-		["@operator"] = { link = "Operator" },
+		["@operator"] = { fg = palette.cloud },
 
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
@@ -754,7 +754,7 @@ local function set_highlights()
 		NavicIconsNull = { fg = palette.bark },
 		NavicIconsNumber = { fg = palette.autumn },
 		NavicIconsObject = { fg = palette.autumn },
-		NavicIconsOperator = { fg = palette.subtle },
+		NavicIconsOperator = { fg = palette.cloud },
 		NavicIconsPackage = { fg = palette.muted },
 		NavicIconsProperty = { fg = palette.cloud },
 		NavicIconsString = { fg = palette.autumn },
