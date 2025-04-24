@@ -47,7 +47,7 @@ config.options = {
 		error = "bark",
 		hint = "warm",
 		info = "cloud",
-		ok = "leaf",
+		ok = "muted",
 		warn = "autumn",
 		note = "pine",
 		todo = "canopy",
@@ -69,7 +69,7 @@ config.options = {
 		h3 = "canopy",
 		h4 = "autumn",
 		h5 = "pine",
-		h6 = "leaf",
+		h6 = "muted",
 
 		---@deprecated Replaced by `options.highlight_groups["Normal"]`
 		-- background = "base",
