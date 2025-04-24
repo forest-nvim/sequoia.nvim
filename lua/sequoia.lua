@@ -220,7 +220,7 @@ local function set_highlights()
 		StorageClass = { fg = palette.cloud },
 		String = { fg = palette.autumn },
 		Structure = { fg = palette.cloud },
-		Tag = { fg = palette.cloud },
+		Tag = { fg = palette.leaf },
 		Todo = { fg = palette.canopy, bg = palette.canopy, blend = 20 },
 		Type = { fg = palette.cloud },
 		TypeDef = { link = "Type" },
