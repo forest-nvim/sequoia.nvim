@@ -71,6 +71,8 @@ local function set_highlights()
 		["@text.uri"] = { fg = groups.link },
 		["@text.warning"] = { fg = groups.warn },
 		["@todo"] = { link = "Todo" },
+		["@operator"] = { fg = palette.bark },
+		["Operator"] = { fg = palette.bark },
 
 		-- lukas-reineke/indent-blankline.nvim
 		IndentBlanklineChar = { fg = palette.muted, nocombine = true },
