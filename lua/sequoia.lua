@@ -87,7 +87,7 @@ local function set_highlights()
 		CursorColumn = { bg = palette.overlay },
 		-- CursorIM = {},
 		CursorLine = { bg = palette.overlay },
-		CursorLineNr = { fg = palette.text, bold = styles.bold },
+		CursorLineNr = { fg = palette.subtle, bold = styles.bold },
 		-- DarkenedPanel = { },
 		-- DarkenedStatusline = {},
 		DiffAdd = { bg = groups.git_add, blend = 20 },
@@ -105,7 +105,7 @@ local function set_highlights()
 		FoldColumn = { fg = palette.muted },
 		Folded = { fg = palette.text, bg = groups.panel },
 		IncSearch = { link = "CurSearch" },
-		LineNr = { fg = palette.muted },
+		LineNr = { fg = palette.subtle },
 		MatchParen = { fg = palette.pine, bg = palette.pine, blend = 25 },
 		ModeMsg = { fg = palette.subtle },
 		MoreMsg = { fg = palette.warm },
@@ -232,7 +232,7 @@ local function set_highlights()
 
 		htmlArg = { fg = palette.warm },
 		htmlBold = { bold = styles.bold },
-		htmlEndTag = { fg = palette.subtle },
+		htmlEndTag = { fg = palette.canopy },
 		htmlH1 = { link = "markdownH1" },
 		htmlH2 = { link = "markdownH2" },
 		htmlH3 = { link = "markdownH3" },
@@ -240,9 +240,9 @@ local function set_highlights()
 		htmlH5 = { link = "markdownH5" },
 		htmlItalic = { italic = styles.italic },
 		htmlLink = { link = "markdownUrl" },
-		htmlTag = { fg = palette.subtle },
-		htmlTagN = { fg = palette.text },
-		htmlTagName = { fg = palette.cloud },
+		htmlTag = { fg = palette.canopy },
+		htmlTagN = { fg = palette.canopy },
+		htmlTagName = { fg = palette.canopy },
 
 		markdownDelimiter = { fg = palette.subtle },
 		markdownH1 = { fg = groups.h1, bold = styles.bold },
@@ -733,7 +733,7 @@ local function set_highlights()
 		DashboardCenter = { fg = palette.autumn },
 		DashboardFooter = { fg = palette.warm },
 		DashboardHeader = { fg = palette.pine },
-		DashboardShortcut = { fg = palette.bark },
+		DashboardShortcut = { fg = palette.canopy },
 
 		-- SmiteshP/nvim-navic
 		NavicIconsArray = { fg = palette.autumn },
