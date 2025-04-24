@@ -404,7 +404,7 @@ local function set_highlights()
 
 		["@tag"] = { link = "Tag" },
 		["@tag.attribute"] = { fg = palette.bark },
-		["@tag.delimiter"] = { fg = palette.text },
+		["@tag.delimiter"] = { fg = palette.subtle },
 
 		--- Non-highlighting captures
 		-- ["@none"] = {},
