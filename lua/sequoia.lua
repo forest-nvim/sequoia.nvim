@@ -35,7 +35,7 @@ local function set_highlights()
 		["@number"] = { link = "Number" },
 		["@parameter"] = { fg = palette.warm, italic = styles.italic },
 		["@preproc"] = { link = "PreProc" },
-		["@punctuation"] = { fg = palette.subtle },
+		["@punctuation"] = { fg = palette.text},
 		["@punctuation.bracket"] = { link = "@punctuation" },
 		["@punctuation.delimiter"] = { link = "@punctuation" },
 		["@punctuation.special"] = { link = "@punctuation" },
