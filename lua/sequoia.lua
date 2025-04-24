@@ -18,7 +18,7 @@ local function set_highlights()
 		panel_border_highlight_med = palette.highlight_med,
 		panel_border_highlight_high = palette.highlight_high,
 
-		error = palette.bark,
+		error = palette.error,
 		warn = palette.autumn,
 		info = palette.canopy,
 		ok = palette.pine,
