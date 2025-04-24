@@ -230,7 +230,7 @@ local function set_highlights()
 		healthSuccess = { fg = groups.info },
 		healthWarning = { fg = groups.warn },
 
-		htmlArg = { fg = palette.warm },
+		htmlArg = { fg = palette.bark },
 		htmlBold = { bold = styles.bold },
 		htmlEndTag = { fg = palette.canopy },
 		htmlH1 = { link = "markdownH1" },
@@ -403,7 +403,7 @@ local function set_highlights()
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
-		["@tag.attribute"] = { fg = palette.warm },
+		["@tag.attribute"] = { fg = palette.bark },
 		["@tag.delimiter"] = { fg = palette.subtle },
 
 		--- Non-highlighting captures
