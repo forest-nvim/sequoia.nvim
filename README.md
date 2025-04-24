@@ -1,4 +1,4 @@
-# 🌲 Sequoia.nvim
+# 🌲 sequoia.nvim
 
 A Neovim theme with three modes!
 
