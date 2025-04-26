@@ -1,4 +1,4 @@
---- Rosé Pine for Obsidian(epwalsh)
+--- Rosé baja for Obsidian(epwalsh)
 --- https://github.com/epwalsh/obsidian.nvim
 ---
 --- @usage
@@ -8,7 +8,7 @@
 local p = require("sequoia.palette")
 
 return {
-	ObsidianBullet = { fg = p.muted },
-	ObsidianRefText = { underline = true, fg = p.warm },
-	ObsidianDone = { bold = true, fg = p.cloud }
+	ObsidianBullet = { fg = p.sky },
+	ObsidianRefText = { underline = true, fg = p.honey },
+	ObsidianDone = { bold = true, fg = p.denim }
 }

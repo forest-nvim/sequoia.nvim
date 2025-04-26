@@ -8,21 +8,21 @@ end
 
 return {
 	normal = {
-		a = { bg = p.surface, fg = p.canopy, gui = "bold" },
+		a = { bg = p.surface, fg = p.sun, gui = "bold" },
 		b = { bg = p.surface, fg = p.text },
 		c = { bg = p.surface, fg = p.subtle, gui = "italic" },
 	},
 	insert = {
-		a = { bg = p.surface, fg = p.cloud, gui = "bold" },
+		a = { bg = p.surface, fg = p.denim, gui = "bold" },
 	},
 	visual = {
-		a = { bg = p.surface, fg = p.warm, gui = "bold" },
+		a = { bg = p.surface, fg = p.honey, gui = "bold" },
 	},
 	replace = {
-		a = { bg = p.surface, fg = p.pine, gui = "bold" },
+		a = { bg = p.surface, fg = p.baja, gui = "bold" },
 	},
 	command = {
-		a = { bg = p.surface, fg = p.bark, gui = "bold" },
+		a = { bg = p.surface, fg = p.lavendar, gui = "bold" },
 	},
 	inactive = {
 		a = { bg = bg_base, fg = p.subtle, gui = "bold" },

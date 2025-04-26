@@ -1,6 +1,6 @@
----@alias Variant "main" | "night" | "rise"
----@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, bark: string, autumn: string, canopy: string, pine: string, cloud: string, warm: string }
----@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "bark" | "autumn" | "canopy" | "pine" | "cloud" | "warm" | "highlight_low" | "highlight_med" | "highlight_high"
+---@alias Variant "main" | "night" | "insomnia"
+---@alias Palette { base: string, surface: string, overlay: string, sky: string, subtle: string, text: string, lavendar: string, lily: string, sun: string, baja: string, denim: string, honey: string }
+---@alias PaletteColor "base" | "surface" | "overlay" | "sky" | "subtle" | "text" | "lavendar" | "lily" | "sun" | "baja" | "denim" | "honey" | "highlight_low" | "highlight_med" | "highlight_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
 local config = {}
@@ -40,43 +40,43 @@ config.options = {
 
 	---@type table<string, string | PaletteColor>
 	groups = {
-		border = "muted",
-		link = "warm",
+		border = "sky",
+		link = "honey",
 		panel = "surface",
 
-		error = "bark",
-		hint = "warm",
-		info = "cloud",
-		ok = "muted",
-		warn = "autumn",
-		note = "pine",
-		todo = "canopy",
+		error = "lavendar",
+		hint = "honey",
+		info = "denim",
+		ok = "sky",
+		warn = "lily",
+		note = "baja",
+		todo = "sun",
 
-		git_add = "cloud",
-		git_change = "canopy",
-		git_delete = "bark",
-		git_dirty = "canopy",
-		git_ignore = "muted",
-		git_merge = "warm",
-		git_rename = "pine",
-		git_stage = "warm",
-		git_text = "canopy",
+		git_add = "denim",
+		git_change = "sun",
+		git_delete = "lavendar",
+		git_dirty = "sun",
+		git_ignore = "sky",
+		git_merge = "honey",
+		git_rename = "baja",
+		git_stage = "honey",
+		git_text = "sun",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "warm",
-		h2 = "cloud",
-		h3 = "canopy",
-		h4 = "autumn",
-		h5 = "pine",
-		h6 = "muted",
+		h1 = "honey",
+		h2 = "denim",
+		h3 = "sun",
+		h4 = "lily",
+		h5 = "baja",
+		h6 = "sky",
 
 		---@deprecated Replaced by `options.highlight_groups["Normal"]`
 		-- background = "base",
 		---@deprecated Replaced by `options.highlight_groups["Comment"]`
 		-- comment = "subtle",
 		---@deprecated Replaced by `options.highlight_groups["@punctuation"]`
-		-- punctuation = "muted",
+		-- punctuation = "sky",
 		---@deprecated Expects a table with values h1...h6
 		-- headings = "text",
 	},
@@ -105,7 +105,7 @@ config.options = {
 
 local function migrate(options)
 	if options.bold_vert_split then
-		local border = options.groups.border or "muted"
+		local border = options.groups.border or "sky"
 		options.highlight_groups["VertSplit"] = { fg = border, bg = border }
 		options.highlight_groups["WinSeparator"] = { fg = border, bg = border }
 	end
