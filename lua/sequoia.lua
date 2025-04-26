@@ -6,8 +6,39 @@ local function set_highlights()
 	local palette = require("sequoia.palette")
 	local styles = config.options.styles
 
-	local groups = {}
+	local groups = {
+		-- Default groups
+		border = palette.subtle,
+		panel = palette.surface,
+		panel_highlight = palette.highlight_low,
+		panel_highlight_med = palette.highlight_med,
+		panel_highlight_high = palette.highlight_high,
+		panel_border = palette.subtle,
+		panel_border_highlight = palette.highlight_low,
+		panel_border_highlight_med = palette.highlight_med,
+		panel_border_highlight_high = palette.highlight_high,
 
+		error = palette.error,
+		warn = palette.honey,
+		info = palette.sun,
+		ok = palette.baja,
+		hint = palette.denim,
+		link = palette.honey,
+
+		git_add = palette.lily,
+		git_change = palette.sun,
+		git_delete = palette.lavendar,
+		git_text = palette.baja,
+
+		todo = palette.honey,
+
+		h1 = palette.lily,
+		h2 = palette.sun,
+		h3 = palette.baja,
+		h4 = palette.denim,
+		h5 = palette.honey,
+		h6 = palette.text,
+	}
 
 	for group, color in pairs(config.options.groups) do
 		groups[group] = utilities.parse_color(color)
@@ -21,6 +52,66 @@ local function set_highlights()
 				or "NONE",
 		}
 	end
+
+	local highlights = {}
+	local legacy_highlights = {
+		["@attribute.diff"] = { fg = palette.lily },
+		["@boolean"] = { link = "Boolean" },
+		["@class"] = { fg = palette.denim },
+		["@conditional"] = { link = "Conditional" },
+		["@field"] = { fg = palette.denim },
+		["@include"] = { link = "Include" },
+		["@interface"] = { fg = palette.denim },
+		["@macro"] = { link = "Macro" },
+		["@method"] = { fg = palette.sun },
+		["@namespace"] = { link = "Include" },
+		["@number"] = { link = "Number" },
+		["@parameter"] = { fg = palette.honey, italic = styles.italic },
+		["@preproc"] = { link = "PreProc" },
+		["@punctuation"] = { fg = palette.text },
+		["@punctuation.bracket"] = { link = "@punctuation" },
+		["@punctuation.delimiter"] = { link = "@punctuation" },
+		["@punctuation.special"] = { link = "@punctuation" },
+		["@regexp"] = { link = "String" },
+		["@repeat"] = { link = "Repeat" },
+		["@storageclass"] = { link = "StorageClass" },
+		["@symbol"] = { link = "Identifier" },
+		["@text"] = { fg = palette.text },
+		["@text.danger"] = { fg = groups.error },
+		["@text.diff.add"] = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		["@text.diff.delete"] = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
+		["@text.emphasis"] = { italic = styles.italic },
+		["@text.environment"] = { link = "Macro" },
+		["@text.environment.name"] = { link = "Type" },
+		["@text.math"] = { link = "Special" },
+		["@text.note"] = { link = "SpecialComment" },
+		["@text.strike"] = { strikethrough = true },
+		["@text.strong"] = { bold = styles.bold },
+		["@text.title"] = { link = "Title" },
+		["@text.title.1.markdown"] = { link = "markdownH1" },
+		["@text.title.1.marker.markdown"] = { link = "markdownH1Delimiter" },
+		["@text.title.2.markdown"] = { link = "markdownH2" },
+		["@text.title.2.marker.markdown"] = { link = "markdownH2Delimiter" },
+		["@text.title.3.markdown"] = { link = "markdownH3" },
+		["@text.title.3.marker.markdown"] = { link = "markdownH3Delimiter" },
+		["@text.title.4.markdown"] = { link = "markdownH4" },
+		["@text.title.4.marker.markdown"] = { link = "markdownH4Delimiter" },
+		["@text.title.5.markdown"] = { link = "markdownH5" },
+		["@text.title.5.marker.markdown"] = { link = "markdownH5Delimiter" },
+		["@text.title.6.markdown"] = { link = "markdownH6" },
+		["@text.title.6.marker.markdown"] = { link = "markdownH6Delimiter" },
+		["@text.underline"] = { underline = true },
+		["@text.uri"] = { fg = groups.link },
+		["@text.warning"] = { fg = groups.warn },
+		["@todo"] = { link = "Todo" },
+		["@operator"] = { fg = palette.text },
+		Operator = { fg = palette.text },
+
+		-- lukas-reineke/indent-blankline.nvim
+		IndentBlanklineChar = { fg = palette.sky, nocombine = true },
+		IndentBlanklineSpaceChar = { fg = palette.sky, nocombine = true },
+		IndentBlanklineSpaceCharBlankline = { fg = palette.sky, nocombine = true },
+	}
 	local default_highlights = {
 		ColorColumn = { bg = palette.surface },
 		Conceal = { bg = "NONE" },
@@ -377,6 +468,7 @@ local function set_highlights()
 		["@lsp.typemod.variable.injected"] = { link = "@variable" },
 
 		--- Plugins
+
 		-- lewis6991/gitsigns.nvim
 		GitSignsAdd = { fg = groups.git_add, bg = "NONE" },
 		GitSignsChange = { fg = groups.git_change, bg = "NONE" },
@@ -431,6 +523,11 @@ local function set_highlights()
 		NeoTreeTabSeparatorInactive = { link = "WinSeparator" },
 		NeoTreeTitleBar = { link = "StatusLineTerm" },
 
+		-- lukas-reineke/indent-blankline.nvim
+		IblIndent = { fg = palette.overlay },
+		IblScope = { fg = palette.denim },
+		IblWhitespace = { fg = palette.overlay },
+
 		-- hrsh7th/nvim-cmp
 		CmpItemAbbr = { fg = palette.subtle },
 		CmpItemAbbrDeprecated = { fg = palette.subtle, strikethrough = true },
@@ -479,6 +576,139 @@ local function set_highlights()
 		TroubleCount = { fg = palette.honey, bg = palette.surface },
 		TroubleNormal = { fg = palette.text, bg = groups.panel },
 
+		-- echasnovski/mini.nvim
+		MiniAnimateCursor = { reverse = true, nocombine = true },
+		MiniAnimateNormalFloat = { link = "NormalFloat" },
+
+		MiniClueBorder = { link = "FloatBorder" },
+		MiniClueDescGroup = { link = "DiagnosticFloatingWarn" },
+		MiniClueDescSingle = { link = "NormalFloat" },
+		MiniClueNextKey = { link = "DiagnosticFloatingHint" },
+		MiniClueNextKeyWithPostkeys = { link = "DiagnosticFloatingError" },
+		MiniClueSeparator = { link = "DiagnosticFloatingInfo" },
+		MiniClueTitle = { bg = groups.panel, bold = styles.bold },
+
+		MiniCompletionActiveParameter = { underline = true },
+
+		MiniCursorword = { underline = true },
+		MiniCursorwordCurrent = { underline = true },
+
+		MiniDepsChangeAdded = { fg = groups.git_add },
+		MiniDepsChangeRemoved = { fg = groups.git_delete },
+		MiniDepsHint = { link = "DiagnosticHint" },
+		MiniDepsInfo = { link = "DiagnosticInfo" },
+		MiniDepsMsgBreaking = { link = "DiagnosticWarn" },
+		MiniDepsPlaceholder = { link = "Comment" },
+		MiniDepsTitle = { link = "Title" },
+		MiniDepsTitleError = { link = "DiffDelete" },
+		MiniDepsTitleSame = { link = "DiffText" },
+		MiniDepsTitleUpdate = { link = "DiffAdd" },
+
+		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
+		MiniDiffOverContext = { bg = palette.surface },
+		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
+		MiniDiffSignAdd = { fg = groups.git_add },
+		MiniDiffSignChange = { fg = groups.git_change },
+		MiniDiffSignDelete = { fg = groups.git_delete },
+
+		MiniFilesBorder = { link = "FloatBorder" },
+		MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
+		MiniFilesCursorLine = { link = "CursorLine" },
+		MiniFilesDirectory = { link = "Directory" },
+		MiniFilesFile = { fg = palette.text },
+		MiniFilesNormal = { link = "NormalFloat" },
+		MiniFilesTitle = { link = "FloatTitle" },
+		MiniFilesTitleFocused = { fg = palette.sun, bg = groups.panel, bold = styles.bold },
+
+		MiniHipatternsFixme = { fg = palette.base, bg = groups.error, bold = styles.bold },
+		MiniHipatternsHack = { fg = palette.base, bg = groups.warn, bold = styles.bold },
+		MiniHipatternsNote = { fg = palette.base, bg = groups.info, bold = styles.bold },
+		MiniHipatternsTodo = { fg = palette.base, bg = groups.hint, bold = styles.bold },
+
+		MiniIconsAzure = { fg = palette.denim },
+		MiniIconsBlue = { fg = palette.baja },
+		MiniIconsCyan = { fg = palette.denim },
+		MiniIconsGreen = { fg = palette.sky },
+		MiniIconsGrey = { fg = palette.subtle },
+		MiniIconsOrange = { fg = palette.sun },
+		MiniIconsPurple = { fg = palette.honey },
+		MiniIconsRed = { fg = palette.lavendar },
+		MiniIconsYellow = { fg = palette.lily },
+
+		MiniIndentscopeSymbol = { fg = palette.sky },
+		MiniIndentscopeSymbolOff = { fg = palette.lily },
+
+		MiniJump = { sp = palette.lily, undercurl = true },
+
+		MiniJump2dDim = { fg = palette.subtle },
+		MiniJump2dSpot = { fg = palette.lily, bold = styles.bold, nocombine = true },
+		MiniJump2dSpotAhead = { fg = palette.denim, bg = palette.surface, nocombine = true },
+		MiniJump2dSpotUnique = { fg = palette.sun, bold = styles.bold, nocombine = true },
+
+		MiniMapNormal = { link = "NormalFloat" },
+		MiniMapSymbolCount = { link = "Special" },
+		MiniMapSymbolLine = { link = "Title" },
+		MiniMapSymbolView = { link = "Delimiter" },
+
+		MiniNotifyBorder = { link = "FloatBorder" },
+		MiniNotifyNormal = { link = "NormalFloat" },
+		MiniNotifyTitle = { link = "FloatTitle" },
+
+		MiniOperatorsExchangeFrom = { link = "IncSearch" },
+
+		MiniPickBorder = { link = "FloatBorder" },
+		MiniPickBorderBusy = { link = "DiagnosticFloatingWarn" },
+		MiniPickBorderText = { bg = groups.panel },
+		MiniPickIconDirectory = { link = "Directory" },
+		MiniPickIconFile = { link = "MiniPickNormal" },
+		MiniPickHeader = { link = "DiagnosticFloatingHint" },
+		MiniPickMatchCurrent = { link = "CursorLine" },
+		MiniPickMatchMarked = { link = "Visual" },
+		MiniPickMatchRanges = { fg = palette.denim },
+		MiniPickNormal = { link = "NormalFloat" },
+		MiniPickPreviewLine = { link = "CursorLine" },
+		MiniPickPreviewRegion = { link = "IncSearch" },
+		MiniPickPrompt = { bg = groups.panel, bold = styles.bold },
+
+		MiniStarterCurrent = { nocombine = true },
+		MiniStarterFooter = { fg = palette.subtle },
+		MiniStarterHeader = { link = "Title" },
+		MiniStarterInactive = { link = "Comment" },
+		MiniStarterItem = { link = "Normal" },
+		MiniStarterItemBullet = { link = "Delimiter" },
+		MiniStarterItemPrefix = { link = "WarningMsg" },
+		MiniStarterSection = { fg = palette.sun },
+		MiniStarterQuery = { link = "MoreMsg" },
+
+		MiniStatuslineDevinfo = { fg = palette.subtle, bg = palette.overlay },
+		MiniStatuslineFileinfo = { link = "MiniStatuslineDevinfo" },
+		MiniStatuslineFilename = { fg = palette.sky, bg = palette.surface },
+		MiniStatuslineInactive = { link = "MiniStatuslineFilename" },
+		MiniStatuslineModeCommand = { fg = palette.base, bg = palette.lavendar, bold = styles.bold },
+		MiniStatuslineModeInsert = { fg = palette.base, bg = palette.denim, bold = styles.bold },
+		MiniStatuslineModeNormal = { fg = palette.base, bg = palette.sun, bold = styles.bold },
+		MiniStatuslineModeOther = { fg = palette.base, bg = palette.sun, bold = styles.bold },
+		MiniStatuslineModeReplace = { fg = palette.base, bg = palette.baja, bold = styles.bold },
+		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.honey, bold = styles.bold },
+
+		MiniSurround = { link = "IncSearch" },
+
+		MiniTablineCurrent = { fg = palette.text, bg = palette.overlay, bold = styles.bold },
+		MiniTablineFill = { link = "TabLineFill" },
+		MiniTablineHidden = { fg = palette.subtle, bg = groups.panel },
+		MiniTablineModifiedCurrent = { fg = palette.overlay, bg = palette.text, bold = styles.bold },
+		MiniTablineModifiedHidden = { fg = groups.panel, bg = palette.subtle },
+		MiniTablineModifiedVisible = { fg = groups.panel, bg = palette.text },
+		MiniTablineTabpagesection = { link = "Search" },
+		MiniTablineVisible = { fg = palette.text, bg = groups.panel },
+
+		MiniTestEmphasis = { bold = styles.bold },
+		MiniTestFail = { fg = palette.lavendar, bold = styles.bold },
+		MiniTestPass = { fg = palette.denim, bold = styles.bold },
+
+		MiniTrailspace = { bg = palette.lavendar },
+
 		-- goolord/alpha-nvim
 		AlphaButtons = { fg = palette.denim },
 		AlphaFooter = { fg = palette.lily },
@@ -491,8 +721,6 @@ local function set_highlights()
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = { bg = palette.overlay },
 		TreesitterContextLineNumber = { fg = palette.sun, bg = palette.overlay },
-
-
 	}
 	local transparency_highlights = {
 		DiagnosticVirtualTextError = { fg = groups.error },
@@ -542,6 +770,20 @@ local function set_highlights()
 		MiniPickPrompt = { bg = "NONE", bold = styles.bold },
 		MiniPickBorderText = { bg = "NONE" },
 	}
+
+	if config.options.enable.legacy_highlights then
+		for group, highlight in pairs(legacy_highlights) do
+			highlights[group] = highlight
+		end
+	end
+	for group, highlight in pairs(default_highlights) do
+		highlights[group] = highlight
+	end
+	if styles.transparency then
+		for group, highlight in pairs(transparency_highlights) do
+			highlights[group] = highlight
+		end
+	end
 
 	-- Reconcile highlights with config
 	if config.options.highlight_groups ~= nil and next(config.options.highlight_groups) ~= nil then
