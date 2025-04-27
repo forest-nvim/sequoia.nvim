@@ -1,4 +1,4 @@
---- Rosé Pine for markid
+--- Rosé baja for markid
 --- https://github.com/David-Kunz/markid
 ---
 --- @usage
@@ -7,4 +7,4 @@
 
 local p = require("sequoia.palette")
 
-return { p.cloud, p.canopy, p.warm }
+return { p.denim, p.sun, p.honey }

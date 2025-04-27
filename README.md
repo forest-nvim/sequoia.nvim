@@ -11,7 +11,7 @@ A beautiful and versatile Neovim theme with three distinct modes, designed to ma
   A dark, subdued palette perfect for late-night sessions when everything else feels too bright. Ideal for 3AM focus.
 
 - **🌅 Sequoia Rise**  
-  A soft, warm theme inspired by sunrise—great for gentle morning coding.
+  A soft, honey theme inspired by sunrise—great for gentle morning coding.
 
 ## 🔧 Installation
 

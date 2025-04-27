@@ -1,4 +1,4 @@
---- Rosé Pine for galaxyline fork
+--- Rosé baja for galaxyline fork
 --- https://github.com/NTBBloodbath/galaxyline.nvim
 ---
 --- @usage
@@ -10,11 +10,11 @@ return {
 	bg = p.surface,
 	fg = p.text,
 	fg_alt = p.subtle,
-	yellow = p.autumn,
-	cyan = p.canopy,
-	green = p.pine,
-	orange = p.muted,
-	magenta = p.warm,
-	blue = p.cloud,
-	red = p.bark,
+	yellow = p.lily,
+	cyan = p.sun,
+	green = p.baja,
+	orange = p.sky,
+	magenta = p.honey,
+	blue = p.denim,
+	red = p.lavendar,
 }

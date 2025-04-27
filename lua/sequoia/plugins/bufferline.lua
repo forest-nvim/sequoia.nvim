@@ -1,4 +1,4 @@
---- Rosé Pine for bufferline
+--- Rosé baja for bufferline
 --- https://github.com/akinsho/bufferline.nvim
 ---
 --- @usage

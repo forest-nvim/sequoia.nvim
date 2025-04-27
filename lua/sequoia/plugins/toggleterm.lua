@@ -1,4 +1,4 @@
---- Rosé Pine for toggleterm
+--- Rosé baja for toggleterm
 --- https://github.com/akinsho/toggleterm.nvim
 ---
 --- @usage
