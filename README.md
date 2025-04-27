@@ -10,8 +10,8 @@ A beautiful and versatile Neovim theme with three distinct modes, designed to ma
 - **🌌 Sequoia Night**  
   A dark, subdued palette perfect for late-night sessions when everything else feels too bright. Ideal for 3AM focus.
 
-- **🌅 Sequoia Rise**  
-  A soft, honey theme inspired by sunrise—great for gentle morning coding.
+- **🌅 Sequoia Insomnia**  
+	A harsh, black theme with bright neon colors. This is what my experience with Insomnia has felt like.
 
 ## 🔧 Installation
 
@@ -36,11 +36,11 @@ To switch between variants, simply change the name passed to `:colorscheme`, for
 
 ## 📸 Previews
 ### Sequoia
-![Screenshot 2025-04-25 at 14 10 57](https://github.com/user-attachments/assets/2f1af240-6070-4cbd-aed7-20175046f98e)
+![image](https://github.com/user-attachments/assets/95861f05-c256-412c-94eb-87dc6032fc9d)
 ### Sequoia Night
-![Screenshot 2025-04-25 at 14 11 26](https://github.com/user-attachments/assets/26a5a1c4-f353-45d3-88e1-431cc6205bb4)
-### Sequoia Rise
-![Screenshot 2025-04-25 at 14 12 16](https://github.com/user-attachments/assets/bb48a74a-59c6-448c-9de1-76571d65c000)
+![image](https://github.com/user-attachments/assets/d3bc80f0-66dc-4269-b4a4-95e67760bd08)
+### Sequoia Insomnia
+![image](https://github.com/user-attachments/assets/8b02111b-6e4a-423f-baf9-539a90d185b0)
 
 
 ## 💬 Feedback & Contributions
