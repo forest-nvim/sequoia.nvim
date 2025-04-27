@@ -35,10 +35,13 @@ To switch between variants, simply change the name passed to `:colorscheme`, for
 ```
 
 ## 📸 Previews
+### Sequoia
+![Screenshot 2025-04-25 at 14 10 57](https://github.com/user-attachments/assets/2f1af240-6070-4cbd-aed7-20175046f98e)
+### Sequoia Night
+![Screenshot 2025-04-25 at 14 11 26](https://github.com/user-attachments/assets/26a5a1c4-f353-45d3-88e1-431cc6205bb4)
+### Sequoia Rise
+![Screenshot 2025-04-25 at 14 12 16](https://github.com/user-attachments/assets/bb48a74a-59c6-448c-9de1-76571d65c000)
 
-<!-- Add screenshots here if available -->
-
-_Coming soon!_
 
 ## 💬 Feedback & Contributions
 
