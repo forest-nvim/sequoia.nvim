@@ -4,13 +4,13 @@ A beautiful and versatile Neovim theme with three distinct modes, designed to ma
 
 ## ✨ Theme Variants
 
-- **🌲 Sequoia**  
+- **🌿 Sequoia**  
   Inspired by JetBrains Fleet. A professional, vibrant, and colorful theme for daily use.
 
-- **🌌 Sequoia Night**  
+- **🌲 Sequoia Night**  
   A dark, subdued palette perfect for late-night sessions when everything else feels too bright. Ideal for 3AM focus.
 
-- **🌅 Sequoia Insomnia**  
+- **🎆 Sequoia Insomnia**  
 	A harsh, black theme with bright neon colors. This is what my experience with Insomnia has felt like.
 
 ## 🔧 Installation
