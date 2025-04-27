@@ -355,7 +355,7 @@ local function set_highlights()
 		["@function.method"] = { fg = palette.sun },
 		["@function.method.call"] = { fg = palette.honey },
 
-		["@constructor"] = { fg = palette.denim },
+		["@constructor"] = { fg = palette.sky },
 		["@operator"] = { fg = palette.text },
 
 		["@keyword"] = { link = "Keyword" },
