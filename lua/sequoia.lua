@@ -865,7 +865,9 @@ function M.colorscheme(variant)
 		vim.cmd("hi clear")
 		vim.cmd("syntax reset")
 	end
-	vim.g.colors_name = "sequoia"
+
+	-- Dynamically set colors_name based on the variant
+	vim.g.colors_name = variant and ("sequoia-" .. variant) or "sequoia"
 
 	if variant == "rise" then
 		vim.o.background = "light"
