@@ -11,7 +11,7 @@ A beautiful and versatile Neovim theme with three distinct modes, designed to ma
   A dark, subdued palette perfect for late-night sessions when everything else feels too bright. Ideal for 3AM focus.
 
 - **🎆 Sequoia Insomnia**  
-	A harsh, black theme with bright neon colors. This is what my experience with Insomnia has felt like.
+	A harsh, black theme with bright neon colors.
 
 ## 🔧 Installation
 
