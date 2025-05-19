@@ -100,9 +100,12 @@ local function set_highlights()
 		Operator = { fg = palette.text },
 
 		-- lukas-reineke/indent-blankline.nvim
-		IndentBlanklineChar = { fg = palette.sky, nocombine = true },
-		IndentBlanklineSpaceChar = { fg = palette.sky, nocombine = true },
-		IndentBlanklineSpaceCharBlankline = { fg = palette.sky, nocombine = true },
+		IndentBlanklineChar = { fg = palette.subtle, nocombine = true },
+		IndentBlanklineSpaceChar = { fg = palette.subtle, nocombine = true },
+		IndentBlanklineSpaceCharBlankline = { fg = palette.subtle, nocombine = true },
+		IblScope = { fg = palette.sun },
+		IblIndent = { fg = palette.overlay },
+		IblWhitespace = { fg = palette.overlay },
 	}
 	local default_highlights = {
 		ColorColumn = { bg = palette.surface },

@@ -38,3 +38,4 @@ return {
 		c = { bg = bg_base, fg = p.sky },
 	},
 }
+
