@@ -714,7 +714,7 @@ local function set_highlights()
 		CopilotSuggestion = { fg = palette.subtle, italic = styles.italic },
 
 		-- Exafunction/windsurf.vim
-		WindsurfCurrent = { fg = palette.subtle, bg = palette.overlay, italic = true },
+		CodeiumSuggestion = { fg = palette.subtle, bg = palette.overlay, italic = true },
 
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = { bg = palette.overlay },
