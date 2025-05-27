@@ -713,6 +713,9 @@ local function set_highlights()
 		-- github/copilot.vim
 		CopilotSuggestion = { fg = palette.subtle, italic = styles.italic },
 
+		-- Exafunction/windsurf.vim
+		WindsurfCurrent = { fg = palette.subtle, bg = palette.overlay, italic = true },
+
 		-- nvim-treesitter/nvim-treesitter-context
 		TreesitterContext = { bg = palette.overlay },
 		TreesitterContextLineNumber = { fg = palette.sun, bg = palette.overlay },
