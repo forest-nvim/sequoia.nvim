@@ -599,13 +599,13 @@ local function set_highlights()
 		MiniDepsTitleSame = { link = "DiffText" },
 		MiniDepsTitleUpdate = { link = "DiffAdd" },
 
-		MiniDiffOverAdd = { fg = groups.git_add, bg = groups.git_add, blend = 20 },
+		MiniDiffOverAdd = { fg = palette.grass, bg = palette.grass, blend = 20 },
 		MiniDiffOverChange = { fg = groups.git_change, bg = groups.git_change, blend = 20 },
 		MiniDiffOverContext = { bg = palette.surface },
-		MiniDiffOverDelete = { fg = groups.git_delete, bg = groups.git_delete, blend = 20 },
-		MiniDiffSignAdd = { fg = groups.git_add },
-		MiniDiffSignChange = { fg = groups.git_change },
-		MiniDiffSignDelete = { fg = groups.git_delete },
+		MiniDiffOverDelete = { fg = palette.error, bg = palette.error, blend = 20 },
+		MiniDiffSignAdd = { fg = palette.grass },
+		MiniDiffSignChange = { fg = palette.honey },
+		MiniDiffSignDelete = { fg = palette.error },
 
 		MiniFilesBorder = { link = "FloatBorder" },
 		MiniFilesBorderModified = { link = "DiagnosticFloatingWarn" },
