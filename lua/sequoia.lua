@@ -24,9 +24,9 @@ local function set_highlights()
 		hint = palette.denim,
 		link = palette.honey,
 
-		git_add = palette.lily,
+		git_add = palette.grass,
 		git_change = palette.sun,
-		git_delete = palette.lavendar,
+		git_delete = palette.error,
 		git_text = palette.baja,
 
 		todo = palette.honey,
