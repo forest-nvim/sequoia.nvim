@@ -125,7 +125,7 @@ local function set_highlights()
 		diffAdded = { link = "DiffAdd" },
 		diffChanged = { link = "DiffChange" },
 		diffRemoved = { link = "DiffDelete" },
-		Directory = { fg = palette.sky, bold = styles.bold },
+		Directory = { fg = palette.lavendar, bold = styles.bold },
 		-- EndOfBuffer = {},
 		ErrorMsg = { fg = groups.error, bold = styles.bold },
 		FloatBorder = make_border(),
@@ -338,7 +338,7 @@ local function set_highlights()
 		["@type.builtin"] = { fg = palette.denim, bold = styles.bold },
 		-- ["@type.definition"] = {},
 
-		["@attribute"] = { fg = palette.honey },
+		["@attribute"] = { fg = palette.lavendar },
 		["@attribute.builtin"] = { fg = palette.honey, bold = styles.bold },
 		["@property"] = { fg = palette.denim, italic = styles.italic },
 
