@@ -1,4 +1,4 @@
----@alias Variant "main" | "night" | "insomnia"
+---@alias Variant "main" | "night" | "fog" | "ember" | "moss" | "rise"
 ---@alias Palette { base: string, surface: string, overlay: string, sky: string, subtle: string, text: string, lavendar: string, lily: string, sun: string, baja: string, denim: string, honey: string }
 ---@alias PaletteColor "base" | "surface" | "overlay" | "sky" | "subtle" | "text" | "lavendar" | "lily" | "sun" | "baja" | "denim" | "honey" | "highlight_low" | "highlight_med" | "highlight_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
@@ -44,23 +44,23 @@ config.options = {
 		link = "honey",
 		panel = "surface",
 
-		error = "lavendar",
-		hint = "honey",
+		error = "error",
+		hint = "denim",
 		info = "denim",
-		ok = "sky",
-		warn = "lily",
+		ok = "baja",
+		warn = "honey",
 		note = "baja",
 		todo = "sun",
 
-		git_add = "denim",
-		git_change = "sun",
-		git_delete = "lavendar",
-		git_dirty = "sun",
-		git_ignore = "sky",
+		git_add = "grass",
+		git_change = "denim",
+		git_delete = "error",
+		git_dirty = "honey",
+		git_ignore = "subtle",
 		git_merge = "honey",
 		git_rename = "baja",
-		git_stage = "honey",
-		git_text = "sun",
+		git_stage = "grass",
+		git_text = "denim",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor

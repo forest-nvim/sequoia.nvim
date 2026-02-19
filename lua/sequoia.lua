@@ -25,9 +25,9 @@ local function set_highlights()
 		link = palette.honey,
 
 		git_add = palette.grass,
-		git_change = palette.sun,
+		git_change = palette.denim,
 		git_delete = palette.error,
-		git_text = palette.baja,
+		git_text = palette.denim,
 
 		todo = palette.honey,
 	}
@@ -217,18 +217,18 @@ local function set_highlights()
 		Character = { fg = palette.lily },
 		Comment = { fg = palette.subtle, italic = styles.italic },
 		Conditional = { fg = palette.baja },
-		Constant = { fg = palette.lily },
+		Constant = { fg = palette.lavendar },
 		Debug = { fg = palette.sun },
 		Define = { fg = palette.honey },
 		Delimiter = { fg = palette.text },
 		Error = { fg = palette.error },
 		Exception = { fg = palette.baja },
-		Float = { fg = palette.lily },
+		Float = { fg = palette.sun },
 		Function = { fg = palette.sun },
 		Identifier = { fg = palette.text },
 		Include = { fg = palette.baja },
 		Keyword = { fg = palette.baja },
-		Label = { fg = palette.denim },
+		Label = { fg = palette.grass },
 		LspCodeLens = { fg = palette.subtle },
 		LspCodeLensSeparator = { fg = palette.sky },
 		LspInlayHint = { fg = palette.sky, bg = palette.sky, blend = 10 },
@@ -236,7 +236,7 @@ local function set_highlights()
 		LspReferenceText = { bg = palette.highlight_med },
 		LspReferenceWrite = { bg = palette.highlight_med },
 		Macro = { fg = palette.grass },
-		Number = { fg = palette.honey },
+		Number = { fg = palette.sun },
 		Operator = { fg = palette.text },
 		PreCondit = { fg = palette.honey },
 		PreProc = { link = "PreCondit" },
@@ -248,7 +248,7 @@ local function set_highlights()
 		StorageClass = { fg = palette.denim },
 		String = { fg = palette.lily },
 		Structure = { fg = palette.denim },
-		Tag = { fg = palette.honey },
+		Tag = { fg = palette.denim },
 		Todo = { fg = palette.sun, bg = palette.sun, blend = 20 },
 		Type = { fg = palette.denim },
 		TypeDef = { link = "Type" },
@@ -258,9 +258,9 @@ local function set_highlights()
 		healthSuccess = { fg = groups.info },
 		healthWarning = { fg = groups.warn },
 
-		htmlArg = { fg = palette.lavendar },
+		htmlArg = { fg = palette.grass },
 		htmlBold = { bold = styles.bold },
-		htmlEndTag = { fg = palette.sun },
+		htmlEndTag = { fg = palette.denim },
 		htmlH1 = { link = "markdownH1" },
 		htmlH2 = { link = "markdownH2" },
 		htmlH3 = { link = "markdownH3" },
@@ -268,9 +268,9 @@ local function set_highlights()
 		htmlH5 = { link = "markdownH5" },
 		htmlItalic = { italic = styles.italic },
 		htmlLink = { link = "markdownUrl" },
-		htmlTag = { fg = palette.sun },
-		htmlTagN = { fg = palette.sun },
-		htmlTagName = { fg = palette.sun },
+		htmlTag = { fg = palette.denim },
+		htmlTagN = { fg = palette.denim },
+		htmlTagName = { fg = palette.denim },
 
 		markdownDelimiter = { fg = palette.subtle },
 		markdownH1 = { fg = groups.h1, bold = styles.bold },
@@ -309,8 +309,8 @@ local function set_highlights()
 		["@variable.parameter.builtin"] = { fg = palette.text, italic = styles.italic, bold = styles.bold },
 		["@variable.member"] = { fg = palette.denim },
 
-		["@constant"] = { fg = palette.lily },
-		["@constant.builtin"] = { fg = palette.lily, bold = styles.bold },
+		["@constant"] = { fg = palette.lavendar },
+		["@constant.builtin"] = { fg = palette.lavendar, bold = styles.bold },
 		["@constant.macro"] = { fg = palette.grass },
 
 		["@module"] = { fg = palette.text },
@@ -338,8 +338,8 @@ local function set_highlights()
 		["@type.builtin"] = { fg = palette.denim, bold = styles.bold },
 		-- ["@type.definition"] = {},
 
-		["@attribute"] = { fg = palette.lavendar },
-		["@attribute.builtin"] = { fg = palette.honey, bold = styles.bold },
+		["@attribute"] = { fg = palette.grass },
+		["@attribute.builtin"] = { fg = palette.grass, bold = styles.bold },
 		["@property"] = { fg = palette.denim, italic = styles.italic },
 
 		["@function"] = { fg = palette.sun },
@@ -348,10 +348,10 @@ local function set_highlights()
 		["@function.macro"] = { link = "Function" },
 
 		["@function.method"] = { fg = palette.sun },
-		["@function.method.call"] = { fg = palette.honey },
+		["@function.method.call"] = { fg = palette.sun },
 
 		["@constructor"] = { fg = palette.sky },
-		["@operator"] = { fg = palette.honey },
+		["@operator"] = { fg = palette.text },
 
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
@@ -431,7 +431,7 @@ local function set_highlights()
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
-		["@tag.attribute"] = { fg = palette.lavendar },
+		["@tag.attribute"] = { fg = palette.grass },
 		["@tag.delimiter"] = { fg = palette.subtle },
 
 		--- Non-highlighting captures
@@ -834,18 +834,18 @@ local function set_highlights()
 	if config.options.enable.terminal then
 		vim.g.terminal_color_0 = palette.overlay -- black
 		vim.g.terminal_color_8 = palette.subtle -- bright black
-		vim.g.terminal_color_1 = palette.lavendar -- red
-		vim.g.terminal_color_9 = palette.lavendar -- bright red
+		vim.g.terminal_color_1 = palette.error -- red
+		vim.g.terminal_color_9 = palette.error -- bright red
 		vim.g.terminal_color_2 = palette.baja -- green
 		vim.g.terminal_color_10 = palette.baja -- bright green
-		vim.g.terminal_color_3 = palette.lily -- yellow
-		vim.g.terminal_color_11 = palette.lily -- bright yellow
+		vim.g.terminal_color_3 = palette.sun -- yellow
+		vim.g.terminal_color_11 = palette.sun -- bright yellow
 		vim.g.terminal_color_4 = palette.denim -- blue
 		vim.g.terminal_color_12 = palette.denim -- bright blue
-		vim.g.terminal_color_5 = palette.honey -- magenta
-		vim.g.terminal_color_13 = palette.honey -- bright magenta
-		vim.g.terminal_color_6 = palette.sun -- cyan
-		vim.g.terminal_color_14 = palette.sun -- bright cyan
+		vim.g.terminal_color_5 = palette.lily -- magenta
+		vim.g.terminal_color_13 = palette.lily -- bright magenta
+		vim.g.terminal_color_6 = palette.baja -- cyan
+		vim.g.terminal_color_14 = palette.baja -- bright cyan
 		vim.g.terminal_color_7 = palette.text -- white
 		vim.g.terminal_color_15 = palette.text -- bright white
 
@@ -877,7 +877,7 @@ function M.colorscheme(variant)
 
 	if variant == "rise" then
 		vim.o.background = "light"
-	elseif variant == "main" or variant == "night" then
+	elseif variant == "main" or variant == "night" or variant == "fog" or variant == "ember" or variant == "moss" then
 		vim.o.background = "dark"
 	end
 
