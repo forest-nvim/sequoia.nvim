@@ -1,3 +1,5 @@
+A set of themes heavily influenced by JetBrain's Fleet Dark theme, but with tints, color variants, and some slight differences!
+
 ## 🔧 Installation
 
 Using [lazy.nvim](https://github.com/folke/lazy.nvim):
